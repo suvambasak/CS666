@@ -1,0 +1,62 @@
+$date
+	Sun Aug 14 13:05:22 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module full_adder_test $end
+$var wire 1 ! s $end
+$var wire 1 " co $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % c $end
+$scope module uut $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % c $end
+$var wire 1 " co $end
+$var wire 1 ! s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#2
+1!
+1%
+#4
+1!
+1$
+0%
+#6
+1"
+0!
+1%
+#8
+0"
+1!
+1#
+0$
+0%
+#10
+1"
+0!
+1%
+#12
+1"
+0!
+1$
+0%
+#14
+1!
+1%
+#20
