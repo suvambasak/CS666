@@ -1,5 +1,5 @@
 $date
-	Sun Aug 14 13:05:22 2022
+	Sun Aug 14 14:51:57 2022
 $end
 $version
 	Icarus Verilog
@@ -17,8 +17,8 @@ $scope module uut $end
 $var wire 1 # a $end
 $var wire 1 $ b $end
 $var wire 1 % c $end
-$var wire 1 " co $end
-$var wire 1 ! s $end
+$var reg 1 " co $end
+$var reg 1 ! s $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -34,7 +34,6 @@ $end
 1!
 1%
 #4
-1!
 1$
 0%
 #6
@@ -52,8 +51,6 @@ $end
 0!
 1%
 #12
-1"
-0!
 1$
 0%
 #14
