@@ -4,9 +4,9 @@
 module demo_test;
     reg clk;
     reg rstn;
-    reg [3:0] load_val;
+    reg [2:0] load_val;
 
-    wire [3:0] op;
+    wire [2:0] op;
 
     demo uut(
         .op(op),
@@ -21,9 +21,12 @@ module demo_test;
 
         clk=1'b0;
         rstn=1'b1;
-        load_val=4'b1010;
+        load_val=4'b001;
+
+        // load_val=4'b000;
     end
 
+    // always #2 load_val=load_val+1'b1;
     always #2 clk=!clk;
 
     initial $monitor($time," clk=%b, clear=%b load_val=%b | op=%b",clk,rstn,load_val,op);
