@@ -30,11 +30,11 @@ module lfsr_test;
     end
 
     always #2 clk=!clk;
-    // initial #90 reset=1'b0;
+    initial #262151 reset=1'b0;
 
 
-    initial $monitor("%b",state);
-    // initial $monitor($time," clk=%b, reset=%b,seed=%b | state=%b ",clk,reset,seed,state);
-    initial #262150 $finish;
+    // initial $monitor("%b",state);
+    initial $monitor($time," clk=%b, reset=%b,seed=%b | state=%b ",clk,reset,seed,state);
+    initial #262160 $finish;
     
 endmodule
