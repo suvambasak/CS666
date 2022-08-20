@@ -11,6 +11,8 @@ module lfsr (state,seed,clk,reset);
 
     reg flag=1'b1;
 
+    genvar i;
+
     always @(posedge clk, negedge reset) begin
 
         if (~reset) begin 
@@ -50,21 +52,10 @@ module lfsr (state,seed,clk,reset);
     assign w4 = current[0];
 
 
-    d_flipflop d1(state[0],current[0],clk,reset);
-    d_flipflop d2(state[1],current[1],clk,reset);
-    d_flipflop d3(state[2],current[2],clk,reset);
-    d_flipflop d4(state[3],current[3],clk,reset);
-    d_flipflop d5(state[4],current[4],clk,reset);
-    d_flipflop d6(state[5],current[5],clk,reset);
-    d_flipflop d7(state[6],current[6],clk,reset);
-    d_flipflop d8(state[7],current[7],clk,reset);
-    d_flipflop d9(state[8],current[8],clk,reset);
-    d_flipflop d10(state[9],current[9],clk,reset);
-    d_flipflop d11(state[10],current[10],clk,reset);
-    d_flipflop d12(state[11],current[11],clk,reset);
-    d_flipflop d13(state[12],current[12],clk,reset);
-    d_flipflop d14(state[13],current[13],clk,reset);
-    d_flipflop d15(state[14],current[14],clk,reset);
-    d_flipflop d16(state[15],current[15],clk,reset);
+    generate
+        for(i=0;i<16;i=i+1) begin
+            d_flipflop d(state[i],current[i],clk,reset);
+        end
+    endgenerate
     
 endmodule

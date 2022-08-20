@@ -22,10 +22,10 @@ module adder_test;
         $dumpvars(0,adder_test);
 
         data0 = 8'b00000000;
-        // data1 = 8'b00000000;
+        data1 = 8'b00000000;
 
         // data0 = 8'b11111111;
-        data1 = 8'b11111111;
+        // data1 = 8'b11111111;
 
         mode = 1'b1;
     end
@@ -33,8 +33,8 @@ module adder_test;
     always #5 data0=data0+1'b1;
     // always #5 data0=data0-1'b1;
 
-    // always #10 data1=data1+1'b1;
-    always #10 data1=data1-1'b1;
+    always #10 data1=data1+1'b1;
+    // always #10 data1=data1-1'b1;
     
     always #35 mode=mode+1'b1;
 

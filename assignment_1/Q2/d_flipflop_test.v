@@ -4,7 +4,7 @@
 module d_flipflop_test;
     reg d;
     reg clk;
-    reg clear;
+    reg reset;
 
     wire q;
 
@@ -12,7 +12,7 @@ module d_flipflop_test;
         .q(q),
         .d(d),
         .clk(clk),
-        .clear(clear)
+        .reset(reset)
     );
 
     initial begin
@@ -21,14 +21,14 @@ module d_flipflop_test;
 
         d=1'b0;
         clk=1'b0;
-        clear=1'b1;
+        reset=1'b1;
     end
 
     always #10 d=d+1'b1;
-    initial #90 clear=1'b0;
+    initial #90 reset=1'b0;
     always #3 clk=!clk;
 
-    initial $monitor($time," d=%b, clk=%b, clear=%b | q=%b",d,clk,clear,q);
+    initial $monitor($time," d=%b, clk=%b, reset=%b | q=%b",d,clk,reset,q);
     initial #100 $finish;
 
 endmodule
