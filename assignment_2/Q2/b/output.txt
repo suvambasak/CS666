@@ -1,0 +1,17 @@
+VCD info: dumpfile waveform.vcd opened for output.
+ s = 0 | s[x] = c
+ s = 1 | s[x] = 5
+ s = 2 | s[x] = 6
+ s = 3 | s[x] = b
+ s = 4 | s[x] = 9
+ s = 5 | s[x] = 0
+ s = 6 | s[x] = a
+ s = 7 | s[x] = d
+ s = 8 | s[x] = 3
+ s = 9 | s[x] = e
+ s = a | s[x] = f
+ s = b | s[x] = 8
+ s = c | s[x] = 5
+ s = d | s[x] = 7
+ s = e | s[x] = 1
+ s = f | s[x] = 2
